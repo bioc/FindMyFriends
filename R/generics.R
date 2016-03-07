@@ -536,11 +536,13 @@ setGeneric('pgMatrix', def = function(object) {
 #' @examples 
 #' testPG <- .loadPgExample()
 #' 
+#' \dontrun{
 #' # Generate similarity matrix
 #' simMat <- kmerSimilarity(testPG, lowerLimit=0.75)
 #' 
 #' # Group genes
 #' testPG <- graphGrouping(testPG, simMat)
+#' }
 #' 
 #' @family grouping algorithms
 #' 
@@ -570,7 +572,9 @@ setGeneric('graphGrouping', def = function(object, ...) {
 #' @examples 
 #' testPG <- .loadPgExample()
 #' 
+#' \dontrun{
 #' testPG <- gpcGrouping(testPG)
+#' }
 #' 
 #' @family grouping algorithms
 #'   
@@ -632,7 +636,9 @@ setGeneric('manualGrouping', def = function(object, groups) {
 #' @examples 
 #' testPG <- .loadPgExample()
 #' 
+#' \dontrun{
 #' kmerSim <- kmerSimilarity(testPG, lowerLimit=0.75)
+#' }
 #' 
 #' @export
 #' 
@@ -667,7 +673,9 @@ setGeneric('kmerSimilarity', def = function(object, ...) {
 #' @examples 
 #' testPG <- .loadPgExample(geneLoc=TRUE, withGroups=TRUE)
 #' 
+#' \dontrun{
 #' testPG <- neighborhoodSplit(testPG, lowerLimit=0.75)
+#' }
 #' 
 #' @export
 #' 
@@ -694,8 +702,10 @@ setGeneric('neighborhoodSplit', def = function(object, ...) {
 #' # No paralogue links
 #' hasParalogueLinks(testPG)
 #' 
+#' \dontrun{
 #' # Create the links
 #' testPG <- kmerLink(testPG)
+#' }
 #' 
 #' @export
 #' 
@@ -734,7 +744,9 @@ setGeneric('kmerLink', def = function(object, ...) {
 #' pg2 <- pangenome(genomeFiles, translated = TRUE, geneLocation = 'prodigal')
 #' 
 #' # Combine the two
+#' \dontrun{
 #' pg3 <- addGenomes(pg, pg2, nsParam = list(lowerLimit = 0.8))
+#' }
 #' 
 #' @export
 #' 
@@ -1005,10 +1017,12 @@ setGeneric('pcGraph', def = function(object) {
 #' @examples 
 #' testPG <- .loadPgExample(geneLoc=TRUE, withNeighborhoodSplit=TRUE)
 #' 
+#' \dontrun{
 #' regions <- variableRegions(testPG)
 #' 
 #' # Have a look at the first region
 #' regions[[1]]
+#' }
 #' 
 #' @export
 #' 
