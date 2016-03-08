@@ -127,13 +127,11 @@ Metadata about the organisms can be added and queried using the `addOrgInfo`
 method. For instance we might add some taxonomy data.
 
 ```{r, echo=TRUE, eval=TRUE}
-library(reutils)
-orgMeta <- lapply(orgNames(mycoPan), function(name) {
-    uid <- esearch(name, 'assembly')
-    taxuid <- elink(uid, dbTo = 'taxonomy')
-    reutils::content(esummary(taxuid), as='parsed')
-})
-orgMeta <- do.call(rbind, orgMeta)
+orgMeta <- data.frame(Species = c("hyopneumoniae", "hyopneumoniae", 
+                                  "hyopneumoniae", "pneumoniae", 
+                                  "pneumoniae", "hyopneumoniae", 
+                                  "hyopneumoniae", "hyopneumoniae", 
+                                  "pneumoniae"))
 
 mycoPan <- addOrgInfo(mycoPan, orgMeta)
 head(orgInfo(mycoPan))
