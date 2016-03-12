@@ -64,7 +64,9 @@ pgVirtualLoc subclasses
 \examples{
 testPG <- .loadPgExample(geneLoc=TRUE, withGroups=TRUE)
 
+\dontrun{
 testPG <- neighborhoodSplit(testPG, lowerLimit=0.75)
+}
 
 }
 

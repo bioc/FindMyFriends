@@ -53,10 +53,12 @@ subclasses
 \examples{
 testPG <- .loadPgExample(geneLoc=TRUE, withNeighborhoodSplit=TRUE)
 
+\dontrun{
 regions <- variableRegions(testPG)
 
 # Have a look at the first region
 regions[[1]]
+}
 
 }
 

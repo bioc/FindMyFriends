@@ -56,8 +56,10 @@ testPG <- .loadPgExample(withGroups=TRUE)
 # No paralogue links
 hasParalogueLinks(testPG)
 
+\dontrun{
 # Create the links
 testPG <- kmerLink(testPG)
+}
 
 }
 

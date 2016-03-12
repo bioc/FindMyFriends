@@ -41,11 +41,13 @@ ways e.g. be blast derived.
 \examples{
 testPG <- .loadPgExample()
 
+\dontrun{
 # Generate similarity matrix
 simMat <- kmerSimilarity(testPG, lowerLimit=0.75)
 
 # Group genes
 testPG <- graphGrouping(testPG, simMat)
+}
 
 }
 \seealso{

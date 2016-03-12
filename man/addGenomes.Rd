@@ -66,7 +66,9 @@ genomeFiles <- list.files(location, full.names = TRUE, pattern = '*.fasta')[6:10
 pg2 <- pangenome(genomeFiles, translated = TRUE, geneLocation = 'prodigal')
 
 # Combine the two
+\dontrun{
 pg3 <- addGenomes(pg, pg2, nsParam = list(lowerLimit = 0.8))
+}
 
 }
 
