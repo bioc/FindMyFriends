@@ -322,13 +322,8 @@ groupStat(mycoPan)[[1]]
 head(orgStat(mycoPan))
 ```
 
-To get a very broad overview of your result `plotStat()` can help you:
-
-```{r, echo=TRUE, eval=TRUE, fig.height=18, fig.width=9, fig.align='center'}
-plotStat(mycoPan, color='Species', type='qual', palette=6)
-```
-
-Three other plot functions exists to let you asses general properties of the 
+To get a very broad overview of your result you can use `plotStat()`. Besides 
+that, three other plot functions exists to let you asses general properties of the 
 pangenome. `plotEvolution()` lets you follow the number of singleton, accessory
 and core genes as the number of organisms increases. Generally this type of plot
 is very biased towards the order of organisms, so while it is possible to supply
